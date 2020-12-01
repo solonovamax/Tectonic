@@ -2,6 +2,7 @@ import java.io.ByteArrayOutputStream
 
 plugins {
     java
+    maven
 }
 
 val versionObj = Version("0", "1", "0", true)
