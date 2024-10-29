@@ -9,12 +9,6 @@ pipeline {
         githubPush()
         githubPullRequests(
                 spec: 'H/5 * * * *',
-                events: [Open(), commentPattern('/build')],
-                triggerMode: 'HEAVY_HOOKS',
-                userRestriction: [orgs: 'PolyhedralDev', users: '']
-        )
-        githubPullRequests(
-                spec: 'H/5 * * * *',
                 events: [Open(), commitChanged()],
                 triggerMode: 'HEAVY_HOOKS',
                 userRestriction: [orgs: 'PolyhedralDev', users: '']
