@@ -11,7 +11,7 @@ pipeline {
                 spec: 'H/5 * * * *',
                 events: [Open(), commitChanged(), commentPattern('/rebuild')],
                 triggerMode: 'HEAVY_HOOKS',
-                userRestriction: [orgs: 'PolyhedralDev']
+                userRestriction: [orgs: 'PolyhedralDev', users: '']
         )
     }
 
