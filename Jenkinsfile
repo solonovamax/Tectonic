@@ -9,7 +9,7 @@ pipeline {
         githubPush()
         githubPullRequests(
                 spec: 'H/5 * * * *',
-                events: [Open(), commitChanged(), commentPattern('/rebuild')],
+                events: [Open(), commitChanged(), commentPattern('/build')],
                 triggerMode: 'HEAVY_HOOKS',
                 userRestriction: [orgs: 'PolyhedralDev', users: '']
         )
