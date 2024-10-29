@@ -8,9 +8,10 @@ pipeline {
     triggers {
         githubPush()
         githubPullRequests(
+                spec: 'H/5 * * * *',
                 events: [Open(), commitChanged(), commentPattern('/rebuild')],
                 triggerMode: 'HEAVY_HOOKS',
-                userRestriction: [orgs: 'PolyhedralDev', users: '']
+                userRestriction: [orgs: 'PolyhedralDev']
         )
     }
 
